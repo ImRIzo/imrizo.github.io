@@ -25,7 +25,7 @@ Syntax highlighted code block
 
 [Link](url) and ![Image](src)
 ```
-**[DownloadHere]**(https://raw.githubusercontent.com/Rizowan/rizowan.github.io/master/Release/EveiLL/latest%20chokchoka%20sawa.rar)
+[DownloadHere](https://raw.githubusercontent.com/Rizowan/rizowan.github.io/master/Release/EveiLL/latest%20chokchoka%20sawa.rar)
 For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
 
 ### Jekyll Themes

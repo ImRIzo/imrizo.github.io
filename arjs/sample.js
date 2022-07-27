@@ -159,12 +159,12 @@ function init() {
     scene.visible = false
 
     // Init display object
-    let texture = new THREE.TextureLoader().load('../resources/Map-COL.jpg');
+    let texture = new THREE.TextureLoader().load('./resources/Map-COL.jpg');
     let model = null;
     const loader = new THREE.GLTFLoader();
     loader.load(
         // resource URL
-        "../resources/LeePerrySmith.glb",
+        "./resources/LeePerrySmith.glb",
         // called when the resource is loaded
         function ( gltf ){
             model = gltf.scene;

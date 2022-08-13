@@ -34,6 +34,14 @@ section{
 	padding: 0.2rem;
 }
 
+.section-5 {
+	background-color: #052D3D;
+	text-align: center;
+}
+.center-text{
+	text-align: center;
+}
+
 a.nav-item {
 	color: #dfdfdf;
 }

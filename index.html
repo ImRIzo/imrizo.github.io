@@ -1,181 +1,212 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta http-equiv="X-UA-Compatible" content="ie=edge">
-      <meta name="author" content="harrnish">
+	<title>Portfolio</title>
+	<!-- css files -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.3.1/css/bulma.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/styles.css">
 
-      <title>Welcome!</title>
-
-      <!-- stylesheet -->
-      <link rel="stylesheet" href="style.css">
-
-      <!-- bootstrap cdns -->
-      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-
-      <!-- google fonts -->
-      <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:100,100i,300,300i,400,400i,500,500i,700,700i" rel="stylesheet">
-
-      <!-- terminal effect -->
-      <script src="t.min.js"></script>
-
-      <!-- for on scroll animations -->
-      <link rel="stylesheet" href="animate.css">
-      <script src="wow.min.js"></script>
-
+	<!-- <link rel="icon" type="image/x-icon" href="assets/img/favicon.png"> -->
+	<meta name="author" content="Rezowan Sarkar">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-<body> 
-      <div class="wrapper">
+	<body>
+		<!-- Navbar -->
+		<nav class="nav container void-background">
+			<!-- This "nav-menu" is hidden on mobile -->
+			<!-- Add the modifier "is-active" to display it on mobile -->
+			<div class="nav-left">
+				<a href="https://www.facebook.com/ItzRizOne/" class="nav-item">
+					<span class="icon">
+						<i class="fa fa-facebook"></i>
+					</span>
+				</a>
+				<a href="http://github.com/ImRizo" class="nav-item">
+					<span class="icon">
+						<i class="fa fa-github"></i>
+					</span>
+				</a>
+				<a href="https://twitter.com/ImRiz0" class="nav-item">
+					<span class="icon">
+						<i class="fa fa-twitter"></i>
+					</span>
+				</a>				
+			</div>
 
-            <!--------------- navbar starts here --------------->
-            <nav>
-                  <span id="brand">
-                        <a href="index.html">Supernova Studios</a>
-                  </span>
-            </nav>
-            <!--------------- navbar ends here --------------->
+			<div class="nav-right nav-menu">
+				<a class="nav-item" href="#about">About</a>
+				<a class="nav-item" href="#projects">Projects</a>
+				<a class="nav-item" href="#social">Social</a>
+			</div>
+
+			<!-- This "nav-toggle" hamburger menu is only visible on mobile -->
+			<!-- You need JavaScript to toggle the "is-active" class on "nav-menu" -->
+			<span class="nav-toggle">
+				<span></span>
+				<span></span>
+				<span></span>
+			</span>
+		</nav>
+				
+		<!-- About Me -->
+		<section id="about" class="section section-1">
+			<div class="container has-text-centered">
+				<!-- Source: https://flic.kr/p/pAZBNK -->
+				<img class="avatar" src="assets/img/profile.png">
+			</div>
+			<div class="container"></br>
+				<p class="intro">
+					Md Rezowan Sarkar
+					<br>
+					Game Developer
+					<br>
+					SINGULARITY LIMITED
+					<br>
+					Level 5, House 147, Lane 1
+					<br>
+					Baridhara DOHS, Dhaka 1206, Bangladesh
+			</div>
+		</section>
+		
+		<!-- OpenGL Projects -->
+		<section  id="projects" class="section section-2">
+			<div class="container">
+				<div class="has-text-centered">
+					<h3 class="title is-3">OpenGL Projects</h3>
+				</div>
+				
+				<div class="columns is-multiline is-desktop">
+					<!-- Project 1 -->
+					<div class="column">
+						<div class="box project-text">
+							<article>
+								<div>
+<!-- 									<figure class="image project-figure">
+										<img src="assets/img/project-1.jpg" alt="Image">
+									</figure> -->
+									<figure class="image project-figure">
+										<video width="854" height="480" controls>
+										  <source src="assets/videos/AirplaneGL.mp4" type="video/mp4">
+										  Your browser does not support the video tag.
+										</video>
+									</figure>
+								</div>
+								<div>			
+									<p>
+										This is an OpenGL project. I had to submit it to the varsity as the final Computer Graphics project.
+									</p>
+									<a href="https://imrizo.github.io/">Go To The Project</a>
+								</div>
+							</article>
+						</div>
+					</div>
+					<!-- Project 2 -->
+					<div class="column">
+						<div class="box project-text">
+							<article>
+								<div>
+									<figure class="image project-figure">
+										<video width="854" height="480" controls>
+										  <source src="assets/videos/CampusView.mp4" type="video/mp4">
+										  Your browser does not support the video tag.
+										</video>
+									</figure>
+								</div>
+								<div>			
+									<p>
+										Varsity Campus view in OpenGL
+									</p>
+									<a href="https://github.com/ImRIzo/OpenGL-Project">Go To The Project</a>
+								</div>
+							</article>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
 
 
 
-            <!--------------- hero section starts here --------------->
-            <div class="hero">
-                  <div class="header">
-                        <h1 class="line anim-typewriter">Hi there! How are you today? :)</h1>
-                  </div>
-            </div>
+<!-- Singularity Projects-->
+		<section  id="projects" class="section section-2">
+			<div class="container">
+				<div class="has-text-centered">
+					<h3 class="title is-3">Some Projects @Singularity</h3>
+				</div>
+				
+				<div class="columns is-multiline is-desktop">
+					<!-- Project 1 -->
+					<div class="column">
+						<div class="box project-text">
+							<article>
+								<div>
+									<figure class="image project-figure">
+										<video width="854" height="480" controls>
+										  <source src="assets/videos/AirplaneGL.mp4" type="video/mp4">
+										  Your browser does not support the video tag.
+										</video>
+									</figure>
+								</div>
+								<div>			
+									<p>
+										This is an OpenGL project. I had to submit it to the varsity as the final Computer Graphics project.
+									</p>
+									<a href="https://imrizo.github.io/">Go To The Project</a>
+								</div>
+							</article>
+						</div>
+					</div>
+					<!-- Project 2 -->
+					<div class="column">
+						<div class="box project-text">
+							<article>
+								<div>
+									<figure class="image project-figure">
+										<video width="854" height="480" controls>
+										  <source src="assets/videos/CampusView.mp4" type="video/mp4">
+										  Your browser does not support the video tag.
+										</video>
+									</figure>
+								</div>
+								<div>			
+									<p>
+										Varsity Campus view in OpenGL
+									</p>
+									<a href="https://github.com/ImRIzo/OpenGL-Project">Go To The Project</a>
+								</div>
+							</article>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
 
-            <div class="scroll-down"></div>
-            <!--------------- hero section ends here --------------->
 
 
-            <div class="container">
-                  <div class="hero-content">
-
-                        <div class="row">
-                              <div class="col-lg-12">   
-                              		<div class="wow fadeInUp" data-wow-delay="1s">
-                              			<img src="me.jpg" alt="Avatar" class="avatar"><br><br>
-                             		 </div>                                                                     
-                                    <h3 class="wow fadeInUp" data-wow-delay="1.2s">ola....</h3>
-                                    <p class="wow fadeInUp">Living with passion is what I strictly adhere to. “Always do what you love” how much ever hackneyed this sounds it holds absolutely true. That's why I travel a lot. Not for the sole reason of “loving” to travel but it helps me to get rid of the world and escape into a different dimension of my own. As I am a travel freak I love freezing the moments I relish. The art of capturing photos is something I am always fascinated by.</p>
-
-                                    <p class="wow fadeInUp" data-wow-delay="0.2s">I am a continuous learner. Learning for me equates to exploring new ideas and growing as an individual. I just cannot imagine my life devoid of designing. I freely express my creativity and imagination by designing...............Something is coming</p>
-
-                              </div>
-                        </div>
-                  </div>
-            </div>
-
-
-            <!--------------- projects section starts here --------------->
-            <div class="container-fluid">
-                  <br><br><br>
-
-                  <h6>Selected projects</h6>
-                  <br>
-                  <h6><a href="https://imrizo.github.io/connect">Play ConnectLink</a></h6>
-
-            </div>
-            <!--------------- projects section ends here --------------->
-
-
-
-            <!--------------- footer starts here --------------->
-            <div class="footer">
-                  <div class="container">
-                        <br><br>
-
-                        <div class="collab">
-                              <div class="row">
-                                    <div class="col-lg-12">
-                                          <p class="wow fadeInUp">Got an interesting project? I can help you.</p>
-                                    </div>
-                              </div>
-                        </div>
-
-                        <br>
-
-                        <div class="hr">
-                              <div class="row"></div>
-                        </div>
-
-                        <br><br>
-
-                        <div class="info">
-                              <div class="row">
-                                    <div class="col-lg-4" id="personal">
-                                          <p class="wow fadeInUp">connect with me</p>
-                                          <h4 class="wow fadeInUp" data-wow-delay="0.2s">
-                                                <a href="https://fb.com/ImRizo">Follow me on Facebook</a>
-                                          </h4>
-                                          <br><br>
-                                    </div>
-
-                                    <div class="col-lg-4" id="media">
-                                       
-                                    </div>
-
-                                    <div class="col-lg-4" id="address">
-                                          <p class="wow fadeInUp" data-wow-delay="0s">say hello</p>
-                                          <h4 class="wow fadeInUp" data-wow-delay="0.2s">rizowan69@gmail.com</h4>
-                                          <br><br>
-                                    </div>
-                              </div>
-                        </div>
-                  </div>
-            </div>
-            <!--------------- footer ends here --------------->
-
-            <br><br><br><br>
-
-      </div>
-
-      <!-- greensock cdn -->
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
-
-      <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
-      <script type="text/javascript">
-
-      // navigation starts here
-
-      $("#toggle").click(function() {
-            $(this).toggleClass('on');
-            $("#resize").toggleClass("active");
-      });
-
-      $("#resize ul li a").click(function() {
-            $(this).toggleClass('on');
-            $("#resize").toggleClass("active");
-      });
-
-      $(".close-btn").click(function() {
-            $(this).toggleClass('on');
-            $("#resize").toggleClass("active");
-      });
-
-      // navigation ends here
-
-      // nav animation
-
-      TweenMax.from("#brand", 1, {
-            delay: 0.4,
-            y: 10,
-            opacity: 0,
-            ease: Expo.easeInOut
-      })
-
-      TweenMax.staggerFrom("#menu li a", 1, {
-            delay: 0.4,
-            opacity: 0,
-            ease: Expo.easeInOut
-      }, 0.1);
-
-      // nav animation ends
-
-      new WOW().init();
-
-      </script>
-</body>
+		<!-- Social -->
+		<section id="social" class="section section-3">
+			<div class="container">
+				<div class="has-text-centered">					
+					<h3 class="title is-3">Let's Socialize</h3>
+				</div>
+				<div class="social-container columns">
+					<div class="column is-6 has-text-centered">
+						<a target="_blank" href="https://www.linkedin.com/in/rizwan-sarker-7494b810b"><img class="" src="assets/img/linkedin.png"></a>
+					</div>
+					<div class="column is-6 has-text-centered">
+						<a target="_blank" href="https://www.facebook.com/ItzRizOne"><img class="" src="assets/img/facebook.png"></a>
+					</div>
+				</div>
+			</div>
+		</section>	
+		
+		<!-- Footer -->
+		<section class="section-4 has-text-centered container">
+			<a href="https://imrizo.github.io/">Rezowan Sarkar</a>
+		</section>
+		
+		<!-- Scripts  -->
+		<script src="controller.js"></script>		
+	</body>	
 </html>

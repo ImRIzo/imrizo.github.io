@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const video = await loadVideo("./assets/Mural01.mp4");
     const texture = new THREE.VideoTexture(video);
 
-    const geometry = new THREE.PlaneGeometry(1, 1010/1920);
+    const geometry = new THREE.PlaneGeometry(1, 600/1109);
     const material = new THREE.MeshBasicMaterial({map: texture});
     const plane = new THREE.Mesh(geometry, material);
 

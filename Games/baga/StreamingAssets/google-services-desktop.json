@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "341255966974",
+    "project_id": "bangla-iskool-60fb7",
+    "storage_bucket": "bangla-iskool-60fb7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:341255966974:android:6adc8e4bf112ee2e2715af",
+        "android_client_info": {
+          "package_name": "com.banglaiskool.bagadooliaandroid"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "341255966974-7nhc7gvc0qa9uiaguc0si730e77eij6a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAO_CKCzTI5ffjv2Hq-YvXuAvXhx5n8c5c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "341255966974-7nhc7gvc0qa9uiaguc0si730e77eij6a.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "341255966974-g8e0qb5ampl78kc2j8cdf4q6idb71ls2.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.banglaiskool.bagadoolia"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

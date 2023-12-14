@@ -162,7 +162,7 @@
   /**
    * Porfolio isotope and filter
    */
-  window.addEventListener('load', () => {
+/*  window.addEventListener('load', () => {
     let portfolioContainer = select('.portfolio-container');
     if (portfolioContainer) {
       let portfolioIsotope = new Isotope(portfolioContainer, {
@@ -187,7 +187,53 @@
       }, true);
     }
 
-  });
+  });*/
+
+// modified version of this shit that loads everything except photography in the beginning
+window.addEventListener('load', () => {
+  let portfolioContainer = select('.portfolio-container');
+  if (portfolioContainer) {
+    let portfolioIsotope = new Isotope(portfolioContainer, {
+      itemSelector: '.portfolio-item',
+      filter: ':not(.filter-photography)' // Set default filter to exclude 'filter-photography'
+    });
+
+    let portfolioFilters = select('#portfolio-flters li', true);
+    let allButton = select('#portfolio-flters li[data-filter="*"]');
+
+    // Trigger the click event on the "All" button initially
+    allButton.click();
+
+    on('click', '#portfolio-flters li', function(e) {
+      e.preventDefault();
+
+      // Check if the clicked button is the "All" button
+      if (this.getAttribute('data-filter') === '*') {
+        // Show everything except 'filter-photography'
+        portfolioIsotope.arrange({
+          filter: ':not(.filter-photography)'
+        });
+      } else {
+        // Show the selected category
+        portfolioIsotope.arrange({
+          filter: this.getAttribute('data-filter')
+        });
+      }
+
+      portfolioFilters.forEach(function(el) {
+        el.classList.remove('filter-active');
+      });
+      this.classList.add('filter-active');
+
+      portfolioIsotope.on('arrangeComplete', function() {
+        AOS.refresh();
+      });
+    }, true);
+  }
+});
+
+
+
 
   /**
    * Initiate portfolio lightbox 

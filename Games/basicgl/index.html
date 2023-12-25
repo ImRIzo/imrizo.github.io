@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Unity WebGL Player | Unity_Basic</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background: linear-gradient(to right, #3498db, #2ecc71);
+            animation: gradientAnimation 10s linear infinite alternate;
+        }
+
+        #unity-container {
+            position: relative;
+            width: 60vw; /* Reduced default width */
+            height: 70vh;
+            background: #231F20;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+        }
+
+        #unity-canvas {
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+
+        #fullscreen-button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            padding: 10px;
+            background: #fff;
+            color: #333;
+            border: none;
+            cursor: pointer;
+            outline: none;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        @keyframes gradientAnimation {
+            0% {
+                background-position: 0% 0%;
+            }
+
+            100% {
+                background-position: 100% 0%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="unity-container">
+        <canvas id="unity-canvas" tabindex="-1"></canvas>
+        <button id="fullscreen-button" onclick="toggleFullscreen()">Toggle Fullscreen</button>
+    </div>
+
+    <script src="Build/basicgl.loader.js"></script>
+    <script>
+        function toggleFullscreen() {
+            var canvas = document.getElementById("unity-canvas");
+
+            if (document.fullscreenElement || document.webkitFullscreenElement || document.mozFullScreenElement || document.msFullscreenElement) {
+                // Exit fullscreen
+                if (document.exitFullscreen) {
+                    document.exitFullscreen();
+                } else if (document.webkitExitFullscreen) {
+                    document.webkitExitFullscreen();
+                } else if (document.mozCancelFullScreen) {
+                    document.mozCancelFullScreen();
+                } else if (document.msExitFullscreen) {
+                    document.msExitFullscreen();
+                }
+            } else {
+                // Enter fullscreen
+                if (canvas.requestFullscreen) {
+                    canvas.requestFullscreen();
+                } else if (canvas.webkitRequestFullscreen) {
+                    canvas.webkitRequestFullscreen();
+                } else if (canvas.mozRequestFullScreen) {
+                    canvas.mozRequestFullScreen();
+                } else if (canvas.msRequestFullscreen) {
+                    canvas.msRequestFullscreen();
+                }
+            }
+        }
+
+        if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
+            // Mobile device style: fill the whole browser client area with the game canvas:
+            var container = document.getElementById("unity-container");
+            container.style.width = "100vw";
+            container.style.height = "100vh";
+
+            var canvas = document.querySelector("#unity-canvas");
+            canvas.style.width = "100%";
+            canvas.style.height = "100%";
+            canvas.style.position = "fixed";
+
+            document.body.style.textAlign = "left";
+        }
+
+        createUnityInstance(document.querySelector("#unity-canvas"), {
+            dataUrl: "Build/basicgl.data.unityweb",
+            frameworkUrl: "Build/basicgl.framework.js.unityweb",
+            codeUrl: "Build/basicgl.wasm.unityweb",
+            streamingAssetsUrl: "StreamingAssets",
+            companyName: "com.nothing",
+            productName: "Unity_Basic",
+            productVersion: "0.1.0",
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rhythm</title>
+  <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@500&display=swap" rel="stylesheet">
+  <script src="https://www.youtube.com/iframe_api"></script>
+</head>
+<body>
+    
+    <div id="splash">
+        <div id="logo">Rhythm</div>
+        <div id="loading">Loading<span class="dot">.</span><span class="dot">.</span><span class="dot">.</span></div>
+    </div>
+
+  <!-- YouTube API loads here -->
+  <div id="ytplayer"></div>
+
+  <!-- Ambient Controls -->
+  <div id="ambient-controls">
+    
+    <div class="slider-container" id="rain">
+      <input type="range" min="0" max="1" step="0.01" value="0.1" />
+      <label>Rain</label>
+    </div>
+
+    <div class="slider-container" id="thunder">
+      <input type="range" min="0" max="1" step="0.01" value="0.1" />
+      <label>Thunder</label>
+    </div>
+
+    <div class="slider-container" id="wind">
+      <input type="range" min="0" max="1" step="0.01" value="0.1" />
+      <label>Wind</label>
+    </div>
+
+
+    <div class="slider-container" id="train">
+      <input type="range" min="0" max="1" step="0.01" value="0.1" />
+      <label>Train</label>
+    </div>
+
+    <div class="slider-container" id="water">
+      <input type="range" min="0" max="1" step="0.01" value="0.2" />
+      <label>Water</label>
+    </div>
+
+  </div>
+
+  <!-- Player Bar -->
+  <div id="player-bar">
+    <button id="playPause">▶️</button>
+    <input type="range" id="lofiVolume" min="0" max="1" step="0.01" value="0.8" />
+  </div>
+  
+<!-- ...existing code... -->
+  <script src="script.js"></script>
+</body>
+</html>

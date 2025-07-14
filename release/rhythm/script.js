@@ -1,11 +1,12 @@
 let player;
-let isPlaying = false; // Global state to track play/pause
+let isPlaying = false;
 const ambientSounds = {
   rain: new Audio('sounds/rain.mp3'),
   thunder: new Audio('sounds/thunder.mp3'),
   wind: new Audio('sounds/wind.mp3'),
   train: new Audio('sounds/train.mp3'),
-  water: new Audio('sounds/water.mp3'),
+  bird: new Audio('sounds/bird.mp3'),
+  seawaves: new Audio('sounds/seawaves.mp3'),
 };
 
 // Setup ambient audio
@@ -34,29 +35,6 @@ function onYouTubeIframeAPIReady() {
   });
 }
 
-// Play/Pause button logic
-document.getElementById('playPause').addEventListener('click', () => {
-  if (!player) return;
-
-  if (isPlaying) {
-    // Pause everything
-    player.pauseVideo();
-    for (const key in ambientSounds) {
-      ambientSounds[key].pause();
-    }
-    document.getElementById('playPause').textContent = '▶️';
-    isPlaying = false;
-  } else {
-    // Play everything
-    player.playVideo();
-    for (const key in ambientSounds) {
-      ambientSounds[key].play();
-    }
-    document.getElementById('playPause').textContent = '⏸️';
-    isPlaying = true;
-  }
-});
-
 // Volume control for lofi YouTube audio
 document.getElementById('lofiVolume').addEventListener('input', (e) => {
   const volume = parseFloat(e.target.value) * 100;
@@ -75,3 +53,84 @@ window.addEventListener('DOMContentLoaded', () => {
 });
 
 
+// Play/Pause button logic goes here ... brrrrrrrrrrrrrrrrr.......
+document.getElementById('playPause').addEventListener('click', () => {
+
+  const icon = document.getElementById('playPauseIcon');
+  if (!player || !icon) return;
+
+  if (isPlaying) {
+    // Pause everything
+    player.pauseVideo();
+    for (const key in ambientSounds) {
+      ambientSounds[key].pause();
+    }
+    icon.textContent = 'play_arrow';
+    isPlaying = false;
+  } else {
+    // Play everything
+    player.playVideo();
+    for (const key in ambientSounds) {
+      ambientSounds[key].play();
+    }
+    icon.textContent = 'pause';
+    isPlaying = true;
+  }
+});
+
+// Clock update logic
+function updateClock() {
+  const clock = document.getElementById('clock-time');
+  if (!clock) return;
+  const now = new Date();
+  const hours = String(now.getHours()).padStart(2, '0');
+  const minutes = String(now.getMinutes()).padStart(2, '0');
+  clock.textContent = `${hours}:${minutes}`;
+}
+setInterval(updateClock, 1000);
+updateClock();
+
+
+
+
+// background video logic
+const bgVideos = [
+  './bg/1.webm',
+  './bg/2.webm',
+  './bg/3.webm'
+];
+let currentBgIndex = 0;
+
+const bgVideo = document.getElementById('bgVideo');
+const prevBgBtn = document.getElementById('prevBg');
+const nextBgBtn = document.getElementById('nextBg');
+
+function setBgVideo(index, direction = 'right') {
+  const outClass = direction === 'left' ? 'slide-out-right' : 'slide-out-left';
+  bgVideo.classList.remove('slide-in');
+  bgVideo.classList.add(outClass);
+
+  setTimeout(() => {
+    currentBgIndex = (index + bgVideos.length) % bgVideos.length;
+    bgVideo.src = bgVideos[currentBgIndex];
+    bgVideo.load();
+    bgVideo.play();
+
+    bgVideo.classList.remove(outClass);
+    bgVideo.classList.add('slide-in');
+  }, 500); // Match transition duration
+}
+
+prevBgBtn.addEventListener('click', () => {
+  setBgVideo(currentBgIndex - 1, 'left');
+});
+
+nextBgBtn.addEventListener('click', () => {
+  setBgVideo(currentBgIndex + 1, 'right');
+});
+
+// Optional: Keyboard navigation
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'ArrowLeft') setBgVideo(currentBgIndex - 1, 'left');
+  if (e.key === 'ArrowRight') setBgVideo(currentBgIndex + 1, 'right');
+});

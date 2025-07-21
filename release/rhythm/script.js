@@ -97,8 +97,7 @@ updateClock();
 const bgVideos = [
   './bg/1.webm',
   './bg/2.webm',
-  './bg/3.webm',
-  './bg/4.mp4'
+  './bg/3.webm'
 ];
 let currentBgIndex = 0;
 

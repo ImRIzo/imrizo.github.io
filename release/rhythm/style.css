@@ -209,6 +209,13 @@ body {
   border-radius: 18px 18px 0 0;
   box-shadow: 0 -2px 16px rgba(60,40,90,0.18);
 }
+#player-title {
+  font-family: 'Pacifico', cursive;
+  color: #f7c873;
+  font-size: 1.5rem;
+  margin-right: 28px;
+  letter-spacing: 0.04em;
+}
 
 #playPause {
   font-size: 2rem;
@@ -321,3 +328,22 @@ body {
 .bg-nav-btn:active .material-symbols-rounded {
   color: #fff;
 }
+
+#channelDropdownMenu {
+  transition: opacity 0.3s, transform 0.3s;
+  opacity: 0;
+  transform: translateY(20px);
+  pointer-events: none;
+}
+#channelDropdownMenu[style*="block"] {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+#channel-dropdown-container {
+  position: relative;
+  margin-left: 0;
+  display: flex;
+  align-items: center;
+}
+

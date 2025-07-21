@@ -75,13 +75,27 @@
 
   <!-- Player Bar -->
   <div id="player-bar">
+      <div id="player-title" style="font-family: 'Pacifico', cursive; color: #f7c873; font-size: 1.5rem; margin-right: 28px;">
+    Rhythm v1.1
+      </div>
     <button id="playPause">
       <span id="playPauseIcon" class="material-symbols-rounded">play_arrow</span>
     </button>
     <input type="range" id="lofiVolume" min="0" max="1" step="0.01" value="0.8" />
+
+   
+    <div id="channel-dropdown-container" style=position:relative;">
+      <button id="channelDropdownBtn" class="material-symbols-rounded" style="background:none; border:none; color:#f7c873; font-size:2rem; cursor:pointer;">
+        expand_less
+      </button>
+      <ul id="channelDropdownMenu" style="display:none; position:absolute; bottom:48px; right:0; background:rgba(34,34,34,0.95); border-radius:12px; box-shadow:0 2px 12px rgba(60,40,90,0.18); list-style:none; padding:8px 0; margin:0; min-width:160px; z-index:100;">
+        <!-- JS will populate this -->
+      </ul>
+    </div>
+
   </div>
   
-<!-- ...existing code... -->
+
   <script src="script.js"></script>
 </body>
 </html>

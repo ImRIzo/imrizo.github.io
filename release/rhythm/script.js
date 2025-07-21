@@ -97,7 +97,8 @@ updateClock();
 const bgVideos = [
   './bg/1.webm',
   './bg/2.webm',
-  './bg/3.webm'
+  './bg/3.webm',
+  './bg/4.mp4'
 ];
 let currentBgIndex = 0;
 
@@ -133,4 +134,48 @@ nextBgBtn.addEventListener('click', () => {
 document.addEventListener('keydown', (e) => {
   if (e.key === 'ArrowLeft') setBgVideo(currentBgIndex - 1, 'left');
   if (e.key === 'ArrowRight') setBgVideo(currentBgIndex + 1, 'right');
+});
+
+
+const channels = [
+  { name: "Lofi Girl", id: "jfKfPfyJRdk" },
+  { name: "Chillhop", id: "FcpsfK4IUMs" },
+  { name: "Synthwave", id: "4xDzrJKXOOY" },
+  { name: "Ambient Renders", id: "7NOSDKb0HlU" }
+];
+
+// Populate dropdown
+const channelDropdownMenu = document.getElementById('channelDropdownMenu');
+channels.forEach(channel => {
+  const li = document.createElement('li');
+  li.textContent = channel.name;
+  li.style.padding = '10px 18px';
+  li.style.cursor = 'pointer';
+  li.style.fontFamily = 'Quicksand, sans-serif';
+  li.style.fontSize = '1.1rem';
+  li.style.color = '#fff';
+  li.addEventListener('click', () => {
+    if (player && typeof player.loadVideoById === 'function') {
+      player.loadVideoById(channel.id);
+      isPlaying = true;
+      document.getElementById('playPauseIcon').textContent = 'pause';
+    }
+    channelDropdownMenu.style.display = 'none';
+  });
+  li.addEventListener('mouseenter', () => li.style.background = '#6e5e8a');
+  li.addEventListener('mouseleave', () => li.style.background = 'none');
+  channelDropdownMenu.appendChild(li);
+});
+
+// Dropdown toggle
+const channelDropdownBtn = document.getElementById('channelDropdownBtn');
+channelDropdownBtn.addEventListener('click', () => {
+  channelDropdownMenu.style.display = channelDropdownMenu.style.display === 'none' ? 'block' : 'none';
+});
+
+// Hide dropdown when clicking outside
+document.addEventListener('click', (e) => {
+  if (!channelDropdownBtn.contains(e.target) && !channelDropdownMenu.contains(e.target)) {
+    channelDropdownMenu.style.display = 'none';
+  }
 });

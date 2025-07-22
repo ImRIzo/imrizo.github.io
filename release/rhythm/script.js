@@ -99,6 +99,17 @@ const bgVideos = [
   './bg/2.webm',
   './bg/3.webm'
 ];
+
+// Preload and cache background videos
+bgVideos.forEach(src => {
+  const vid = document.createElement('video');
+  vid.src = src;
+  vid.preload = 'auto';
+  vid.muted = true;
+  vid.style.display = 'none';
+  document.body.appendChild(vid);
+});
+
 let currentBgIndex = 0;
 
 const bgVideo = document.getElementById('bgVideo');

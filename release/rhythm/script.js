@@ -97,7 +97,8 @@ updateClock();
 const bgVideos = [
   './bg/1.webm',
   './bg/2.webm',
-  './bg/3.webm'
+  './bg/3.webm',
+  './bg/4.webm'
 ];
 
 // Preload and cache background videos

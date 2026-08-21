@@ -1,5 +1,5 @@
 /* ============================================================
-   Rezowan Sarkar — Portfolio
+   Rezowan Sarkar - Portfolio
    Vanilla JS. Replaces: bootstrap, aos, isotope, glightbox,
    swiper, typed.js, waypoints, purecounter, php-email-form.
    ============================================================ */

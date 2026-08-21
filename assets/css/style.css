@@ -29,6 +29,7 @@
 .bx-chevron-left:before { content: "\ea4d"; }
 .bx-chevron-right:before { content: "\ea50"; }
 .bx-down-arrow-alt:before { content: "\eab7"; }
+.bx-download:before { content: "\eab9"; }
 .bx-envelope:before { content: "\eac1"; }
 .bx-file-blank:before { content: "\ead6"; }
 .bx-home:before { content: "\eb12"; }
@@ -168,6 +169,22 @@ body.nav-open { overflow: hidden; }
   transition: background 0.3s, transform 0.3s;
 }
 .social-links a:hover { background: var(--accent); transform: translateY(-2px); }
+.btn-cv {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 16px;
+  padding: 10px 24px;
+  border-radius: 30px;
+  background: var(--accent);
+  color: var(--white);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  transition: background 0.3s, transform 0.3s;
+}
+.btn-cv:hover { background: var(--accent-2); transform: translateY(-2px); color: var(--white); }
+.btn-cv i { font-size: 18px; }
 
 /* Sidebar nav */
 #navbar ul { display: flex; flex-direction: column; gap: 4px; }

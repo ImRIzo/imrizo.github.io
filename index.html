@@ -1,898 +1,704 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rezowan Sarkar — AR/VR, Games & Computer Vision Engineer</title>
+  <meta name="description" content="Portfolio of Md Rezowan Sarkar — engineer specializing in AR, VR and video game development with a keen interest in computer vision.">
 
-  <title>Rezowan Sarkar</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+  <link rel="icon" href="assets/img/favicon.png">
 
-  <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Raleway:wght@500;600;700&display=swap" rel="stylesheet">
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
-
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-
-  <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
-
 </head>
-
 <body>
 
-  <!-- ======= Mobile nav toggle button ======= -->
-  <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
+  <!-- ======= Mobile nav toggle ======= -->
+  <button class="mobile-nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false"><i class="bx bx-menu"></i></button>
+  <div class="nav-backdrop"></div>
 
-  <!-- ======= Header ======= -->
+  <!-- ======= Header / Sidebar ======= -->
   <header id="header">
-    <div class="d-flex flex-column">
-
-      <div class="profile">
-        <img src="assets/img/profile-img.jpg" alt="" class="img-fluid rounded-circle">
-        <h1 class="text-light"><a href="index.html">Rezowan Sarkar</a></h1>
-        <div class="social-links mt-3 text-center">
-          <a href="https://github.com/ImRizo" target="_blank" class="github"><i class="bx bxl-github"></i></a>
-          <a href="https://www.linkedin.com/in/imriz1" target="_blank" class="linkedin"><i class="bx bxl-linkedin"></i></a>
-        </div>
+    <div class="profile">
+      <img src="assets/img/profile-img.jpg" alt="Rezowan Sarkar">
+      <h1><a href="index.html">Rezowan Sarkar</a></h1>
+      <p class="tagline">AR / VR · Games · CV</p>
+      <div class="social-links">
+        <a href="https://github.com/ImRizo" target="_blank" rel="noopener" aria-label="GitHub"><i class="bx bxl-github"></i></a>
+        <a href="https://www.linkedin.com/in/imriz1" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="bx bxl-linkedin"></i></a>
       </div>
-
-      <nav id="navbar" class="nav-menu navbar">
-        <ul>
-          <li><a href="#hero" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a></li>
-          <li><a href="#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>About</span></a></li>
-          <li><a href="#resume" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Resume</span></a></li>
-          <li><a href="#portfolio" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Portfolio</span></a></li>
-          <!-- <li><a href="#services" class="nav-link scrollto"><i class="bx bx-server"></i> <span>Services</span></a></li> -->
-          <li><a href="#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
-        </ul>
-      </nav><!-- .nav-menu -->
     </div>
-  </header><!-- End Header -->
 
-  <!-- ======= Hero Section ======= -->
-  <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
-    <div class="hero-container" data-aos="fade-in">
+    <nav id="navbar" aria-label="Main navigation">
+      <ul>
+        <li><a href="#hero" class="nav-link active"><i class="bx bx-home"></i> <span>Home</span></a></li>
+        <li><a href="#about" class="nav-link"><i class="bx bx-user"></i> <span>About</span></a></li>
+        <li><a href="#skills" class="nav-link"><i class="bx bx-book-content"></i> <span>Skills</span></a></li>
+        <li><a href="#resume" class="nav-link"><i class="bx bx-file-blank"></i> <span>Resume</span></a></li>
+        <li><a href="#portfolio" class="nav-link"><i class="bx bx-play"></i> <span>Portfolio</span></a></li>
+        <li><a href="#contact" class="nav-link"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
+      </ul>
+    </nav>
+
+    <div class="sidebar-foot">
+      &copy; <strong>Rezowan</strong> <span id="year"></span><br>
+      Dhaka, Bangladesh
+    </div>
+  </header>
+
+  <!-- ======= Hero ======= -->
+  <section id="hero">
+    <video class="hero-bg" autoplay muted loop playsinline poster="assets/img/hero-bg.jpg" aria-hidden="true" tabindex="-1">
+      <source src="release/rhythm/bg/3.webm" type="video/webm">
+    </video>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
       <h1>Rezowan Sarkar</h1>
-      <p>I'm <span class="typed" data-typed-items="an Engineer, a Photographer"></span></p>
+      <p class="roles">I'm <span class="typed" data-typed="an Engineer,a Game Developer,an AR/VR Developer,a Photographer,an AI Enthusiast"></span><span class="typed-cursor" aria-hidden="true"></span></p>
+      <div class="social-links">
+        <a href="https://github.com/ImRizo" target="_blank" rel="noopener" aria-label="GitHub"><i class="bx bxl-github"></i></a>
+        <a href="https://www.linkedin.com/in/imriz1" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="bx bxl-linkedin"></i></a>
+      </div>
     </div>
-  </section><!-- End Hero -->
+    <a href="#about" class="scroll-down" aria-label="Scroll down"><i class="bx bx-down-arrow-alt"></i></a>
+  </section>
 
   <main id="main">
 
-    <!-- ======= About Section ======= -->
+    <!-- ======= About ======= -->
     <section id="about" class="about">
       <div class="container">
-
-        <div class="section-title">
+        <div class="section-title" data-reveal>
           <h2>About</h2>
           <p>I am an engineer specializing in AR, VR, and Video Games development, with a keen interest in Computer Vision. As an AI enthusiast and hobbyist photographer, I like to play with pixels. You know, every pixel matters. 😊</p>
         </div>
 
-        <div class="row">
-          <div class="col-lg-4" data-aos="fade-right">
-            <img src="assets/img/profile-img.jpg" class="img-fluid" alt="">
+        <div class="about-grid">
+          <div class="photo" data-reveal>
+            <img src="assets/img/profile-img.jpg" alt="Rezowan Sarkar portrait">
           </div>
-          <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
+          <div class="content" data-reveal>
             <h3>Unity Developer &amp; Photographer</h3>
-            <p class="fst-italic">
-              <br>
-              <br>
-            </p>
-            <div class="row">
-              <div class="col-lg-6">
-                <ul>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Full Name:</strong> <span>Md Rezowan Sarkar</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Github:</strong> <span>https://github.com/ImRIzo</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>+8801689802565</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>Dhaka, Bangladesh</span></li>
-                </ul>
-              </div>
-              <div class="col-lg-6">
-                <ul>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong> <span>Aging Like Fine Wine</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>Bachelor in CSE</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span>rsarkar.pro@gmail.com</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Freelance:</strong> <span>Available</span></li>
-                </ul>
-              </div>
-            </div>
+            <ul class="info-list">
+              <li><i class="bx bx-chevron-right"></i> <strong>Full Name:</strong> <span>Md Rezowan Sarkar</span></li>
+              <li><i class="bx bx-chevron-right"></i> <strong>GitHub:</strong> <span><a href="https://github.com/ImRizo" target="_blank" rel="noopener">github.com/ImRizo</a></span></li>
+              <li><i class="bx bx-chevron-right"></i> <strong>Phone:</strong> <span><a href="tel:+8801689802565">+880 1689 802565</a></span></li>
+              <li><i class="bx bx-chevron-right"></i> <strong>City:</strong> <span>Dhaka, Bangladesh</span></li>
+              <li><i class="bx bx-chevron-right"></i> <strong>Age:</strong> <span>Aging Like Fine Wine</span></li>
+              <li><i class="bx bx-chevron-right"></i> <strong>Degree:</strong> <span>Bachelor in CSE</span></li>
+              <li><i class="bx bx-chevron-right"></i> <strong>Email:</strong> <span><a href="mailto:rsarkar.pro@gmail.com">rsarkar.pro@gmail.com</a></span></li>
+              <li><i class="bx bx-chevron-right"></i> <strong>Freelance:</strong> <span>Available</span></li>
+            </ul>
             <p>
-              <br>
-              <br>
-              Professionally worked for Singularity Limited as an Experience Engineer from December 2020 to October 2023. I've gained knowledge in developing Video Games, improved my AR, VR skills. I have developed several applications those requires Computer Vision. Please feel free to check out my portfolio. Thanks
+              Professionally worked for Singularity Limited as an Experience Engineer from December 2020 to October 2023. I've gained knowledge in developing video games and improved my AR/VR skills. I have developed several applications that use Computer Vision. Please feel free to check out my portfolio. Thanks!
             </p>
           </div>
         </div>
-
-      </div>
-    </section><!-- End About Section -->
-
-    <!-- ======= Facts Section ======= -->
-<!--     <section id="facts" class="facts">
-      <div class="container">
-
-        <div class="section-title">
-          <h2>Facts</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
-        </div>
-
-        <div class="row no-gutters">
-
-          <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up">
-            <div class="count-box">
-              <i class="bi bi-emoji-smile"></i>
-              <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1" class="purecounter"></span>
-              <p><strong>Happy Clients</strong> consequuntur quae</p>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up" data-aos-delay="100">
-            <div class="count-box">
-              <i class="bi bi-journal-richtext"></i>
-              <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1" class="purecounter"></span>
-              <p><strong>Projects</strong> adipisci atque cum quia aut</p>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up" data-aos-delay="200">
-            <div class="count-box">
-              <i class="bi bi-headset"></i>
-              <span data-purecounter-start="0" data-purecounter-end="1453" data-purecounter-duration="1" class="purecounter"></span>
-              <p><strong>Hours Of Support</strong> aut commodi quaerat</p>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up" data-aos-delay="300">
-            <div class="count-box">
-              <i class="bi bi-people"></i>
-              <span data-purecounter-start="0" data-purecounter-end="32" data-purecounter-duration="1" class="purecounter"></span>
-              <p><strong>Hard Workers</strong> rerum asperiores dolor</p>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section> -->
-    <!-- End Facts Section -->
-
-    <!-- ======= Skills Section ======= -->
-    <section id="skills" class="skills section-bg">
-      <div class="container">
-
-        <div class="section-title">
-          <h2>Skills</h2>
-          <p>To be honest judging myself with percentage is silly but it looks nice, so I have added those percentage bar. As I've mentioned before, I've worked for Singularity Limited for three years and my primary focus was on Unity Development so i'm pretty confident about it.</p>
-        </div>
-
-        <div class="row skills-content">
-
-          <div class="col-lg-6" data-aos="fade-up">
-
-            <div class="progress">
-              <span class="skill">Unity 3D <i class="val">100%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-
-            <div class="progress">
-              <span class="skill">C# <i class="val">90%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-
-            <div class="progress">
-              <span class="skill">Python <i class="val">75%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-
-          </div>
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-
-            <div class="progress">
-              <span class="skill">AR<i class="val">80%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-
-            <div class="progress">
-              <span class="skill">VR<i class="val">80%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-
-            <div class="progress">
-              <span class="skill">Blender<i class="val">30%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-
-          </div>
-
-        </div>
-
-      </div>
-    </section><!-- End Skills Section -->
-
-    <!-- ======= Resume Section ======= -->
-
-    <section id="resume" class="resume">
-      <div class="container">
-
-        <div class="section-title">
-          <h2>Resume</h2>
-          <p>If you have a minute please check out my resume</p>
-        </div>
-
-        <div class="row">
-          <div class="col-lg-6" data-aos="fade-up">
-            <h3 class="resume-title">Summary</h3>
-            <div class="resume-item pb-0">
-              <h4>Rezowan Sarkar</h4>
-              <p><em>
-                        I currently hold the position of Experience Engineer at Singularity Limited. My primary focus
-                        involves creating games and applications using Unity 3D. These applications offer immersive
-                        experiences through VR headsets and AR technology, while the games are designed for mobile
-                        devices.      
-              </em></p>
-              <ul>
-                <li>Dhaka, Bangladesh</li>
-                <li>+8801689802565</li>
-                <li>rsarkar.pro@gmail.com</li>
-              </ul>
-            </div>
-
-            <h3 class="resume-title">Education</h3>
-            <div class="resume-item">
-              <h4>Bachelor in Computer Science &amp; Engineering</h4>
-              <h5>2015 - 2020</h5>
-              <p><em>International University of Business Agriculture and Technology, Dhaka, Bangladesh</em></p>
-              <p>I've completed my Bachelor program in Computer Scinence and Engineering from IUBAT. 240 ECTS. My Bachelor's thesis topic was "Potato Leaf Disease Detection using Computer Vision and Machine Learning". From here I got interested in Computer Vision, it motivated me to go further with Machine Learning and Image Processing.  
-
-              </p>
-            </div>
-<!--             <div class="resume-item">
-              <h4>Bachelor of Fine Arts &amp; Graphic Design</h4>
-              <h5>2010 - 2014</h5>
-              <p><em>Rochester Institute of Technology, Rochester, NY</em></p>
-              <p>Quia nobis sequi est occaecati aut. Repudiandae et iusto quae reiciendis et quis Eius vel ratione eius unde vitae rerum voluptates asperiores voluptatem Earum molestiae consequatur neque etlon sader mart dila</p>
-            </div> -->
-          </div>
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-            <h3 class="resume-title">Professional Experience</h3>
-            <div class="resume-item">
-              <h4>Xperience Engineer</h4>
-              <h5>2020 - 2023</h5>
-			  <br>
-			  <a href="https://singularitybd.com/">Singularity Ltd.</a>
-			  <br>
-              <p><em>Dhaka, Bangladesh</em></p>
-              <ul>
-                <li>AR, VR development </li>
-                <li>Gameplay programmer for Bangla Iskool - an educational video games for kids. Developed Bangla letter recognition system that takes user input example: kids write a bangla letter and it shows score based on accuracy </li>
-                <li>Supervised the assessment of AR development  for Tika AR Mural app. First AR Mural in Bangladesh for Turkish Embassy</li>
-                <li>Learned to combine Computer Vision and Unity3D to make interactive application. Such as: Using mediapipe on unity to make interactable software like - like virtual book. It takes hand gesture as input to go to the next page of a book. Please checkout my portfolio for more.</li>
-              </ul>
-            </div>
-			
-			<div class="resume-item">
-              <h4>Software Engineer</h4>
-              <h5>2024 - </h5>
-			  <br>
-			  <a href="https://surbanajurong.com/">Surbana Jurong Group</a>
-			  <br>
-              <p><em>Hybrid (Singapore)</em></p>
-              <ul>
-                <li>Digital Twin Development using Unity 3D Engine </li>
-                <li>Retriving data from the server and visualizing datas in the Digital Twin system using UI and 3D model </li>                
-              </ul>
-            </div>
-
-            <!-- ======= add more experience here ======= -->
-
-          </div>
-        </div>
-
       </div>
     </section>
 
-    <!-- End Resume Section -->
+    <!-- ======= Skills ======= -->
+    <section id="skills" class="skills section-bg">
+      <div class="container">
+        <div class="section-title" data-reveal>
+          <h2>Skills</h2>
+          <p>To be honest, judging myself with percentages is silly — but it looks nice, so I added those percentage bars. As I've mentioned before, I've worked for Singularity Limited for three years and my primary focus was on Unity development, so I'm pretty confident about that one.</p>
+        </div>
 
-    <!-- ======= Portfolio Section ======= -->
+        <div class="skills-grid">
+          <div>
+            <div class="skill" data-reveal>
+              <div class="label"><span>Unity 3D</span><span>100%</span></div>
+              <div class="bar"><div class="fill" data-value="100"></div></div>
+            </div>
+            <div class="skill" data-reveal>
+              <div class="label"><span>C#</span><span>90%</span></div>
+              <div class="bar"><div class="fill" data-value="90"></div></div>
+            </div>
+            <div class="skill" data-reveal>
+              <div class="label"><span>Python</span><span>75%</span></div>
+              <div class="bar"><div class="fill" data-value="75"></div></div>
+            </div>
+          </div>
+          <div>
+            <div class="skill" data-reveal>
+              <div class="label"><span>AR</span><span>80%</span></div>
+              <div class="bar"><div class="fill" data-value="80"></div></div>
+            </div>
+            <div class="skill" data-reveal>
+              <div class="label"><span>VR</span><span>80%</span></div>
+              <div class="bar"><div class="fill" data-value="80"></div></div>
+            </div>
+            <div class="skill" data-reveal>
+              <div class="label"><span>Blender</span><span>30%</span></div>
+              <div class="bar"><div class="fill" data-value="30"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= Resume ======= -->
+    <section id="resume" class="resume">
+      <div class="container">
+        <div class="section-title" data-reveal>
+          <h2>Resume</h2>
+          <p>If you have a minute, please check out my resume.</p>
+        </div>
+
+        <div class="resume-grid">
+          <div class="resume-col" data-reveal>
+            <h3>Summary</h3>
+            <div class="timeline">
+              <div class="timeline-item">
+                <h4>Rezowan Sarkar</h4>
+                <p><em>Experience Engineer focused on creating games and applications with Unity 3D — immersive VR/AR experiences and mobile games. Currently building Digital Twin systems as a Software Engineer.</em></p>
+                <ul>
+                  <li>Dhaka, Bangladesh</li>
+                  <li>+880 1689 802565</li>
+                  <li>rsarkar.pro@gmail.com</li>
+                </ul>
+              </div>
+            </div>
+
+            <h3>Education</h3>
+            <div class="timeline">
+              <div class="timeline-item">
+                <h4>Bachelor in Computer Science &amp; Engineering</h4>
+                <span class="period">2015 — 2020</span>
+                <p class="where">International University of Business Agriculture and Technology, Dhaka, Bangladesh</p>
+                <p>I completed my Bachelor program in Computer Science and Engineering from IUBAT (240 ECTS). My thesis topic was "Potato Leaf Disease Detection using Computer Vision and Machine Learning" — that's where my interest in Computer Vision started, and it motivated me to go further with Machine Learning and Image Processing.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="resume-col" data-reveal>
+            <h3>Professional Experience</h3>
+            <div class="timeline">
+              <div class="timeline-item">
+                <h4>Software Engineer</h4>
+                <span class="period">2024 — Present</span>
+                <p class="where"><a href="https://surbanajurong.com/" target="_blank" rel="noopener">Surbana Jurong Group</a> · Hybrid (Singapore)</p>
+                <ul>
+                  <li>Digital Twin development using Unity 3D Engine.</li>
+                  <li>Retrieving data from the server and visualizing it in the Digital Twin system using UI and 3D models.</li>
+                </ul>
+              </div>
+              <div class="timeline-item">
+                <h4>Xperience Engineer</h4>
+                <span class="period">2020 — 2023</span>
+                <p class="where"><a href="https://singularitybd.com/" target="_blank" rel="noopener">Singularity Ltd.</a> · Dhaka, Bangladesh</p>
+                <ul>
+                  <li>AR/VR development.</li>
+                  <li>Gameplay programmer for Bangla Iskool — an educational video game for kids. Developed a Bangla letter recognition system that scores kids' handwriting accuracy.</li>
+                  <li>Supervised AR development for Tika AR Mural — the first AR mural in Bangladesh, for the Turkish Embassy.</li>
+                  <li>Combined Computer Vision and Unity 3D for interactive applications — e.g. a virtual book that turns pages via hand gestures (MediaPipe on Unity).</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= Portfolio ======= -->
     <section id="portfolio" class="portfolio section-bg">
       <div class="container">
-
-        <div class="section-title">
+        <div class="section-title" data-reveal>
           <h2>Portfolio</h2>
-          <p>Here I have included some of my project highlights. Hover over any project then click "+" button to zoom out or click the link button to know more about project in details.</p>
+          <p>Here are some of my project highlights. Hover over any project and click <strong>▶</strong> to watch it in action, or use the link button for more details.</p>
         </div>
 
-        <div class="row" data-aos="fade-up">
-          <div class="col-lg-12 d-flex justify-content-center">
-            <ul id="portfolio-flters">
-              <!-- <button data-filter=":not(.excludeCategory)">All Except Exclude Category</button> -->
-              <!-- <li data-filter="*" class="filter-active">All</li> -->
-              <li data-filter="*" class="filter-active">All</li>
-              <li data-filter=".filter-games">Games</li>
-              <li data-filter=".filter-arvr">AR/VR</li>
-              <li data-filter=".filter-ip">Computer Vision</li>
-              <li data-filter=".filter-others">Others</li>
-              <li data-filter=".filter-photography">Photography</li>
-            </ul>
-          </div>
+        <div class="filters" role="group" aria-label="Portfolio filters" data-reveal>
+          <button type="button" class="active" data-filter="all">All</button>
+          <button type="button" data-filter="games">Games</button>
+          <button type="button" data-filter="arvr">AR / VR</button>
+          <button type="button" data-filter="ip">Computer Vision</button>
+          <button type="button" data-filter="others">Others</button>
+          <button type="button" data-filter="photography">Photography</button>
         </div>
 
+        <div class="portfolio-grid" data-reveal>
 
-
-        <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="100">
-          <div class="col-lg-4 col-md-6 portfolio-item filter-others">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/cnb_dt_other.jpg" class="img-fluid" alt="">
-              <div class="portfolio-links">    
-				<a href="assets/videos/cnb_dt.mp4" data-gallery="portfolioGallery" class="portfolio-lightbox" title="CNB Digital Twin"><i class="bx bx-play"></i></a>			  
-                <a href="details/cnb_digital_twin.html" target="_blank" title="More in Details"><i class="bx bx-link"></i></a>
+          <figure class="p-item" data-category="others">
+            <img src="assets/img/portfolio/cnb_dt_other.jpg" alt="CNB Digital Twin" loading="lazy">
+            <figcaption class="p-overlay">
+              <div class="p-tags"><span>Digital Twin</span></div>
+              <h3>CNB Digital Twin</h3>
+              <div class="p-actions">
+                <a href="assets/videos/cnb_dt.mp4" data-lightbox="video" aria-label="Play video"><i class="bx bx-play"></i> Watch</a>
+                <a href="details/cnb_digital_twin.html" aria-label="More details"><i class="bx bx-link-external"></i> Details</a>
               </div>
-            </div>
-          </div>  
+            </figcaption>
+          </figure>
 
-
-        <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="100">
-          <div class="col-lg-4 col-md-6 portfolio-item filter-others">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/watchlist_qt_other.jpg" class="img-fluid" alt="">
-              <div class="portfolio-links">    
-				<a href="assets/videos/watchlist_app.mp4" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Watchlist"><i class="bx bx-play"></i></a>			  
-                <a href="https://github.com/ImRIzo/Watchlist" target="_blank" title="More in Details"><i class="bx bx-link"></i></a>
+          <figure class="p-item" data-category="others">
+            <img src="assets/img/portfolio/watchlist_qt_other.jpg" alt="Watchlist app" loading="lazy">
+            <figcaption class="p-overlay">
+              <div class="p-tags"><span>Qt / C++</span></div>
+              <h3>Watchlist App</h3>
+              <div class="p-actions">
+                <a href="assets/videos/watchlist_app.mp4" data-lightbox="video" aria-label="Play video"><i class="bx bx-play"></i> Watch</a>
+                <a href="https://github.com/ImRIzo/Watchlist" target="_blank" rel="noopener" aria-label="GitHub repo"><i class="bx bxl-github"></i> Code</a>
               </div>
-            </div>
-          </div>  
+            </figcaption>
+          </figure>
 
-        <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="100">
-          <div class="col-lg-4 col-md-6 portfolio-item filter-ip">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/unstable_diffusion_ai.jpg" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="assets/videos/unstable_diffusion_ai.mp4" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Text to Image AI - Unstable Diffusion"><i class="bx bx-play"></i></a>
-                <a href="https://github.com/ImRIzo/Unstable-Diffusion" target="_blank" title="More in Details"><i class="bx bx-link"></i></a>
+          <figure class="p-item" data-category="ip">
+            <img src="assets/img/portfolio/unstable_diffusion_ai.jpg" alt="Unstable Diffusion text-to-image AI" loading="lazy">
+            <figcaption class="p-overlay">
+              <div class="p-tags"><span>AI</span><span>Text-to-Image</span></div>
+              <h3>Unstable Diffusion</h3>
+              <div class="p-actions">
+                <a href="assets/videos/unstable_diffusion_ai.mp4" data-lightbox="video" aria-label="Play video"><i class="bx bx-play"></i> Watch</a>
+                <a href="https://github.com/ImRIzo/Unstable-Diffusion" target="_blank" rel="noopener" aria-label="GitHub repo"><i class="bx bxl-github"></i> Code</a>
               </div>
-            </div>
-          </div>  
+            </figcaption>
+          </figure>
 
-        <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="100">
-          <div class="col-lg-4 col-md-6 portfolio-item filter-ip">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/nuclei_segmentation_image.jpg" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <!-- <a href="assets/videos/unstable_diffusion_ai.mp4" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Text to Image AI - Unstable Diffusion"><i class="bx bx-play"></i></a> -->
-                <a href="https://colab.research.google.com/drive/1Zd-K-msryPL5xsbXl93-QfKxtjs_wCNr?authuser=1#scrollTo=uXADAo-Faqmq" target="_blank" title="More in Details"><i class="bx bx-link"></i></a>
+          <figure class="p-item" data-category="ip">
+            <img src="assets/img/portfolio/nuclei_segmentation_image.jpg" alt="Nuclei segmentation" loading="lazy">
+            <figcaption class="p-overlay">
+              <div class="p-tags"><span>Deep Learning</span></div>
+              <h3>Nuclei Segmentation</h3>
+              <div class="p-actions">
+                <a href="https://colab.research.google.com/drive/1Zd-K-msryPL5xsbXl93-QfKxtjs_wCNr?authuser=1#scrollTo=uXADAo-Faqmq" target="_blank" rel="noopener"><i class="bx bx-link-external"></i> Open Notebook</a>
               </div>
-            </div>
-          </div>	
+            </figcaption>
+          </figure>
 
-		<div class="row portfolio-container" data-aos="fade-up" data-aos-delay="100">
-          <div class="col-lg-4 col-md-6 portfolio-item filter-ip">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/grassweed_detection_image.jpg" class="img-fluid" alt="">
-              <div class="portfolio-links">                
-                <a href="https://github.com/ImRIzo/GrassWeed_Detector" target="_blank" title="More in Details"><i class="bx bx-link"></i></a>
+          <figure class="p-item" data-category="ip">
+            <img src="assets/img/portfolio/grassweed_detection_image.jpg" alt="Grass/weed detector" loading="lazy">
+            <figcaption class="p-overlay">
+              <div class="p-tags"><span>Computer Vision</span></div>
+              <h3>Grass / Weed Detector</h3>
+              <div class="p-actions">
+                <a href="https://github.com/ImRIzo/GrassWeed_Detector" target="_blank" rel="noopener"><i class="bx bxl-github"></i> Open Repo</a>
               </div>
-            </div>
-          </div>	
+            </figcaption>
+          </figure>
 
-        <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="100">
-          <div class="col-lg-4 col-md-6 portfolio-item filter-ip">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/book_projection_ar.jpg" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="assets/videos/book_projection_ar.mp4" data-gallery="portfolioGallery" class="portfolio-lightbox" title="book_projection_ar"><i class="bx bx-play"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+          <figure class="p-item" data-category="ip">
+            <img src="assets/img/portfolio/book_projection_ar.jpg" alt="Book projection AR" loading="lazy">
+            <figcaption class="p-overlay">
+              <div class="p-tags"><span>AR</span><span>MediaPipe</span></div>
+              <h3>Book Projection</h3>
+              <div class="p-actions">
+                <a href="assets/videos/book_projection_ar.mp4" data-lightbox="video" aria-label="Play video"><i class="bx bx-play"></i> Watch</a>
+                <a href="details/book_projection_details.html" aria-label="More details"><i class="bx bx-link-external"></i> Details</a>
               </div>
-            </div>
-          </div>
+            </figcaption>
+          </figure>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-games">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/bangla_iskool_game.jpg" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="assets/videos/bangla_iskool_game.mp4" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Bangla Iskool"><i class="bx bx-play"></i></a>
-                <a href="details/banglaiskool_details.html" title="More Details"><i class="bx bx-link"></i></a>
+          <figure class="p-item" data-category="games">
+            <img src="assets/img/portfolio/bangla_iskool_game.jpg" alt="Bangla Iskool educational game" loading="lazy">
+            <figcaption class="p-overlay">
+              <div class="p-tags"><span>Unity</span><span>Mobile</span></div>
+              <h3>Bangla Iskool</h3>
+              <div class="p-actions">
+                <a href="assets/videos/bangla_iskool_game.mp4" data-lightbox="video" aria-label="Play video"><i class="bx bx-play"></i> Watch</a>
+                <a href="details/banglaiskool_details.html" aria-label="More details"><i class="bx bx-link-external"></i> Details</a>
               </div>
-            </div>
-          </div>
+            </figcaption>
+          </figure>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-games">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/eveil_game.jpg" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="assets/videos/eveil_game.mp4" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Eveil"><i class="bx bx-play"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+          <figure class="p-item" data-category="games">
+            <img src="assets/img/portfolio/eveil_game.jpg" alt="Eveil game" loading="lazy">
+            <figcaption class="p-overlay">
+              <div class="p-tags"><span>Unity</span></div>
+              <h3>Eveil</h3>
+              <div class="p-actions">
+                <a href="assets/videos/eveil_game.mp4" data-lightbox="video" aria-label="Play video"><i class="bx bx-play"></i> Watch</a>
               </div>
-            </div>
-          </div>
+            </figcaption>
+          </figure>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-games">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/space_shooter_game.jpg" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="assets/videos/space_shooter_game.mp4" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Space Shooter Multiplayer"><i class="bx bx-play"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+          <figure class="p-item" data-category="games">
+            <img src="assets/img/portfolio/space_shooter_game.jpg" alt="Space Shooter multiplayer game" loading="lazy">
+            <figcaption class="p-overlay">
+              <div class="p-tags"><span>Unity</span><span>Multiplayer</span></div>
+              <h3>Space Shooter</h3>
+              <div class="p-actions">
+                <a href="assets/videos/space_shooter_game.mp4" data-lightbox="video" aria-label="Play video"><i class="bx bx-play"></i> Watch</a>
               </div>
-            </div>
-          </div>
+            </figcaption>
+          </figure>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-games">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/spaces_game.jpg" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="https://youtu.be/iRYmkyZcpoI" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Spaces"><i class="bx bx-play"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+          <figure class="p-item" data-category="games">
+            <img src="assets/img/portfolio/spaces_game.jpg" alt="Spaces game" loading="lazy">
+            <figcaption class="p-overlay">
+              <div class="p-tags"><span>Unity</span></div>
+              <h3>Spaces</h3>
+              <div class="p-actions">
+                <a href="https://youtu.be/iRYmkyZcpoI" data-lightbox="youtube" aria-label="Play on YouTube"><i class="bx bx-play"></i> Watch</a>
               </div>
-            </div>
-          </div>
+            </figcaption>
+          </figure>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-games">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/bwm_game.jpg" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="https://imrizo.github.io/Games/bwmgl/" target="_blank" title="Play BWM"><i class="bx bx-play"></i></a>
+          <figure class="p-item" data-category="games">
+            <img src="assets/img/portfolio/bwm_game.jpg" alt="BWM WebGL game" loading="lazy">
+            <figcaption class="p-overlay">
+              <div class="p-tags"><span>Unity WebGL</span></div>
+              <h3>BWM</h3>
+              <div class="p-actions">
+                <a href="Games/bwmgl/" target="_blank" rel="noopener" aria-label="Play BWM"><i class="bx bx-play"></i> Play</a>
               </div>
-            </div>
-          </div>        
+            </figcaption>
+          </figure>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-games">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/connect_game.jpg" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="https://imrizo.github.io/Games/connect/" target="_blank" title="Play Connect"><i class="bx bx-play"></i></a>
+          <figure class="p-item" data-category="games">
+            <img src="assets/img/portfolio/connect_game.jpg" alt="Connect WebGL game" loading="lazy">
+            <figcaption class="p-overlay">
+              <div class="p-tags"><span>Unity WebGL</span></div>
+              <h3>Connect</h3>
+              <div class="p-actions">
+                <a href="Games/connect/" target="_blank" rel="noopener" aria-label="Play Connect"><i class="bx bx-play"></i> Play</a>
               </div>
-            </div>
-          </div>   
+            </figcaption>
+          </figure>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-ip">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/robi_photobooth_image.jpg" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="assets/videos/robi_photobooth_image.mp4" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Robi_Photobooth"><i class="bx bx-play"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+          <figure class="p-item" data-category="ip">
+            <img src="assets/img/portfolio/robi_photobooth_image.jpg" alt="Robi Photobooth" loading="lazy">
+            <figcaption class="p-overlay">
+              <div class="p-tags"><span>Computer Vision</span></div>
+              <h3>Robi Photobooth</h3>
+              <div class="p-actions">
+                <a href="assets/videos/robi_photobooth_image.mp4" data-lightbox="video" aria-label="Play video"><i class="bx bx-play"></i> Watch</a>
               </div>
-            </div>
-          </div>
+            </figcaption>
+          </figure>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-arvr">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/tika_ar_mural_ar.jpg" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="assets/videos/tika_ar_mural_ar.mp4" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Tika AR Mural"><i class="bx bx-play"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+          <figure class="p-item" data-category="arvr">
+            <img src="assets/img/portfolio/tika_ar_mural_ar.jpg" alt="Tika AR Mural" loading="lazy">
+            <figcaption class="p-overlay">
+              <div class="p-tags"><span>AR</span></div>
+              <h3>Tika AR Mural</h3>
+              <div class="p-actions">
+                <a href="assets/videos/tika_ar_mural_ar.mp4" data-lightbox="video" aria-label="Play video"><i class="bx bx-play"></i> Watch</a>
               </div>
-            </div>
-          </div>
+            </figcaption>
+          </figure>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-ip">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/bangla_iskool_image.jpg" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="assets/videos/bangla_iskool_image.mp4" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Bangla Iskool"><i class="bx bx-play"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+          <figure class="p-item" data-category="ip">
+            <img src="assets/img/portfolio/bangla_iskool_image.jpg" alt="Bangla Iskool letter recognition" loading="lazy">
+            <figcaption class="p-overlay">
+              <div class="p-tags"><span>OpenCV</span><span>Recognition</span></div>
+              <h3>Bangla Letter Recognition</h3>
+              <div class="p-actions">
+                <a href="assets/videos/bangla_iskool_image.mp4" data-lightbox="video" aria-label="Play video"><i class="bx bx-play"></i> Watch</a>
               </div>
-            </div>
-          </div>
+            </figcaption>
+          </figure>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-arvr">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/bonstein_vr_vr.jpg" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="assets/videos/bonstein_vr_vr.mp4" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Bonstein VR bike"><i class="bx bx-play"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+          <figure class="p-item" data-category="arvr">
+            <img src="assets/img/portfolio/bonstein_vr_vr.jpg" alt="Bonstein VR bike" loading="lazy">
+            <figcaption class="p-overlay">
+              <div class="p-tags"><span>VR</span></div>
+              <h3>Bonstein VR Bike</h3>
+              <div class="p-actions">
+                <a href="assets/videos/bonstein_vr_vr.mp4" data-lightbox="video" aria-label="Play video"><i class="bx bx-play"></i> Watch</a>
               </div>
-            </div>
-          </div>
+            </figcaption>
+          </figure>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-arvr">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/nisa_card_ar.jpg" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="assets/videos/nisa_card_ar.mp4" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Nisa Card AR"><i class="bx bx-play"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+          <figure class="p-item" data-category="arvr">
+            <img src="assets/img/portfolio/nisa_card_ar.jpg" alt="Nisa Card AR" loading="lazy">
+            <figcaption class="p-overlay">
+              <div class="p-tags"><span>AR</span></div>
+              <h3>Nisa Card AR</h3>
+              <div class="p-actions">
+                <a href="assets/videos/nisa_card_ar.mp4" data-lightbox="video" aria-label="Play video"><i class="bx bx-play"></i> Watch</a>
               </div>
-            </div>
-          </div>
+            </figcaption>
+          </figure>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-ip">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/kinect_color_image.jpg" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="assets/videos/kinect_color_image.mp4" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Coloring Kinect"><i class="bx bx-play"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+          <figure class="p-item" data-category="ip">
+            <img src="assets/img/portfolio/kinect_color_image.jpg" alt="Coloring Kinect" loading="lazy">
+            <figcaption class="p-overlay">
+              <div class="p-tags"><span>Kinect</span></div>
+              <h3>Coloring Kinect</h3>
+              <div class="p-actions">
+                <a href="assets/videos/kinect_color_image.mp4" data-lightbox="video" aria-label="Play video"><i class="bx bx-play"></i> Watch</a>
               </div>
-            </div>
-          </div>
+            </figcaption>
+          </figure>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-arvr">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/lyfe_ar.jpg" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="assets/videos/lyfe_ar.mp4" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Lyfe"><i class="bx bx-play"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+          <figure class="p-item" data-category="arvr">
+            <img src="assets/img/portfolio/lyfe_ar.jpg" alt="Lyfe AR app" loading="lazy">
+            <figcaption class="p-overlay">
+              <div class="p-tags"><span>AR</span></div>
+              <h3>Lyfe</h3>
+              <div class="p-actions">
+                <a href="assets/videos/lyfe_ar.mp4" data-lightbox="video" aria-label="Play video"><i class="bx bx-play"></i> Watch</a>
               </div>
-            </div>
-          </div>
+            </figcaption>
+          </figure>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-others">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/lambo_blender_other.jpg" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="assets/videos/lambo_blender_other.mp4" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Lambo"><i class="bx bx-play"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+          <figure class="p-item" data-category="others">
+            <img src="assets/img/portfolio/lambo_blender_other.jpg" alt="Lamborghini Blender model" loading="lazy">
+            <figcaption class="p-overlay">
+              <div class="p-tags"><span>Blender</span></div>
+              <h3>Lambo — Blender</h3>
+              <div class="p-actions">
+                <a href="assets/videos/lambo_blender_other.mp4" data-lightbox="video" aria-label="Play video"><i class="bx bx-play"></i> Watch</a>
               </div>
-            </div>
-          </div>
+            </figcaption>
+          </figure>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-others">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/airplane_gl_other.jpg" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="assets/videos/airplane_gl_other.mp4" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Aiplane Gl"><i class="bx bx-play"></i></a>
-                <a href="https://github.com/ImRIzo/Airplane-OpenGL" target="_blank" title="More Details"><i class="bx bx-link"></i></a>
+          <figure class="p-item" data-category="others">
+            <img src="assets/img/portfolio/airplane_gl_other.jpg" alt="Airplane OpenGL" loading="lazy">
+            <figcaption class="p-overlay">
+              <div class="p-tags"><span>OpenGL</span></div>
+              <h3>Airplane — OpenGL</h3>
+              <div class="p-actions">
+                <a href="assets/videos/airplane_gl_other.mp4" data-lightbox="video" aria-label="Play video"><i class="bx bx-play"></i> Watch</a>
+                <a href="https://github.com/ImRIzo/Airplane-OpenGL" target="_blank" rel="noopener" aria-label="GitHub repo"><i class="bx bxl-github"></i> Code</a>
               </div>
-            </div>
-          </div>
+            </figcaption>
+          </figure>
 
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-others">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/campus_view_other.jpg" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="assets/videos/campus_view_other.mp4" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Campus GL"><i class="bx bx-play"></i></a>
-                <a href="https://github.com/ImRIzo/IUBAT-building-view" target="_blank" title="More Details"><i class="bx bx-link"></i></a>
+          <figure class="p-item" data-category="others">
+            <img src="assets/img/portfolio/campus_view_other.jpg" alt="Campus view OpenGL" loading="lazy">
+            <figcaption class="p-overlay">
+              <div class="p-tags"><span>OpenGL</span></div>
+              <h3>Campus View — OpenGL</h3>
+              <div class="p-actions">
+                <a href="assets/videos/campus_view_other.mp4" data-lightbox="video" aria-label="Play video"><i class="bx bx-play"></i> Watch</a>
+                <a href="https://github.com/ImRIzo/IUBAT-building-view" target="_blank" rel="noopener" aria-label="GitHub repo"><i class="bx bxl-github"></i> Code</a>
               </div>
-            </div>
-          </div>          
+            </figcaption>
+          </figure>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-others">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/radio_other.jpg" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="assets/videos/radio_other.mp4" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Radio App"><i class="bx bx-play"></i></a>
-                <a href="https://github.com/ImRIzo/BanglaRadio" target="_blank" title="More Details"><i class="bx bx-link"></i></a>
+          <figure class="p-item" data-category="others">
+            <img src="assets/img/portfolio/radio_other.jpg" alt="Radio app" loading="lazy">
+            <figcaption class="p-overlay">
+              <div class="p-tags"><span>Android</span></div>
+              <h3>Radio App</h3>
+              <div class="p-actions">
+                <a href="assets/videos/radio_other.mp4" data-lightbox="video" aria-label="Play video"><i class="bx bx-play"></i> Watch</a>
+                <a href="https://github.com/ImRIzo/BanglaRadio" target="_blank" rel="noopener" aria-label="GitHub repo"><i class="bx bxl-github"></i> Code</a>
               </div>
-            </div>
-          </div>
+            </figcaption>
+          </figure>
 
-
-<!------------------------photography---------------------->
-          <div class="col-lg-4 col-md-6 portfolio-item filter-photography">
-            <div class="portfolio-wrap">
-              <img src="https://i.ibb.co/qB33Vyw/IMG-2452.jpg" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="https://i.ibb.co/qB33Vyw/IMG-2452.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Sikkim India"><i class="bx bx-play"></i></a>                
+          <!-- Photography -->
+          <figure class="p-item" data-category="photography">
+            <img src="https://i.ibb.co/qB33Vyw/IMG-2452.jpg" alt="Sikkim, India" loading="lazy">
+            <figcaption class="p-overlay">
+              <div class="p-tags"><span>Photography</span></div>
+              <h3>Sikkim, India</h3>
+              <div class="p-actions">
+                <a href="https://i.ibb.co/qB33Vyw/IMG-2452.jpg" data-lightbox="image" aria-label="View photo"><i class="bx bx-play"></i> View</a>
               </div>
-            </div>
-          </div>
+            </figcaption>
+          </figure>
 
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-photography">
-            <div class="portfolio-wrap">
-              <img src="https://i.ibb.co/52NYHgN/COX.jpg" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="https://i.ibb.co/52NYHgN/COX.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Cox's Bazar - Teknaf Marine Drive"><i class="bx bx-play"></i></a>                
+          <figure class="p-item" data-category="photography">
+            <img src="https://i.ibb.co/52NYHgN/COX.jpg" alt="Cox's Bazar — Teknaf Marine Drive" loading="lazy">
+            <figcaption class="p-overlay">
+              <div class="p-tags"><span>Photography</span></div>
+              <h3>Teknaf Marine Drive</h3>
+              <div class="p-actions">
+                <a href="https://i.ibb.co/52NYHgN/COX.jpg" data-lightbox="image" aria-label="View photo"><i class="bx bx-play"></i> View</a>
               </div>
-            </div>
-          </div>
+            </figcaption>
+          </figure>
 
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-photography">
-            <div class="portfolio-wrap">
-              <img src="https://i.ibb.co/4K1MH02/IMG-1323.jpg" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="https://i.ibb.co/4K1MH02/IMG-1323.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Theatre"><i class="bx bx-play"></i></a>                
+          <figure class="p-item" data-category="photography">
+            <img src="https://i.ibb.co/4K1MH02/IMG-1323.jpg" alt="Theatre" loading="lazy">
+            <figcaption class="p-overlay">
+              <div class="p-tags"><span>Photography</span></div>
+              <h3>Theatre</h3>
+              <div class="p-actions">
+                <a href="https://i.ibb.co/4K1MH02/IMG-1323.jpg" data-lightbox="image" aria-label="View photo"><i class="bx bx-play"></i> View</a>
               </div>
-            </div>
-          </div>
+            </figcaption>
+          </figure>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-photography">
-            <div class="portfolio-wrap">
-              <img src="https://i.ibb.co/X5jBycx/IMG-KAK.jpg" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="https://i.ibb.co/X5jBycx/IMG-KAK.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Crow"><i class="bx bx-play"></i></a>                
+          <figure class="p-item" data-category="photography">
+            <img src="https://i.ibb.co/X5jBycx/IMG-KAK.jpg" alt="Crow" loading="lazy">
+            <figcaption class="p-overlay">
+              <div class="p-tags"><span>Photography</span></div>
+              <h3>Crow</h3>
+              <div class="p-actions">
+                <a href="https://i.ibb.co/X5jBycx/IMG-KAK.jpg" data-lightbox="image" aria-label="View photo"><i class="bx bx-play"></i> View</a>
               </div>
-            </div>
-          </div>
+            </figcaption>
+          </figure>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-photography">
-            <div class="portfolio-wrap">
-              <img src="https://i.ibb.co/QdFrM1X/IMG-LAL.jpg" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="https://i.ibb.co/QdFrM1X/IMG-LAL.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Lalbagh Kella, Dhaka"><i class="bx bx-play"></i></a>                
+          <figure class="p-item" data-category="photography">
+            <img src="https://i.ibb.co/QdFrM1X/IMG-LAL.jpg" alt="Lalbagh Kella, Dhaka" loading="lazy">
+            <figcaption class="p-overlay">
+              <div class="p-tags"><span>Photography</span></div>
+              <h3>Lalbagh Kella</h3>
+              <div class="p-actions">
+                <a href="https://i.ibb.co/QdFrM1X/IMG-LAL.jpg" data-lightbox="image" aria-label="View photo"><i class="bx bx-play"></i> View</a>
               </div>
-            </div>
-          </div>
+            </figcaption>
+          </figure>
 
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-photography">
-            <div class="portfolio-wrap">
-              <img src="https://i.ibb.co/Ht1GmtK/IMG-SWEET.jpg" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="https://i.ibb.co/Ht1GmtK/IMG-SWEET.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Sweet Sin, Dhanmondi"><i class="bx bx-play"></i></a>                
+          <figure class="p-item" data-category="photography">
+            <img src="https://i.ibb.co/Ht1GmtK/IMG-SWEET.jpg" alt="Sweet Sin, Dhanmondi" loading="lazy">
+            <figcaption class="p-overlay">
+              <div class="p-tags"><span>Photography</span></div>
+              <h3>Sweet Sin, Dhanmondi</h3>
+              <div class="p-actions">
+                <a href="https://i.ibb.co/Ht1GmtK/IMG-SWEET.jpg" data-lightbox="image" aria-label="View photo"><i class="bx bx-play"></i> View</a>
               </div>
-            </div>
-          </div>
-
-
+            </figcaption>
+          </figure>
 
         </div>
-
       </div>
-    </section><!-- End Portfolio Section -->
+    </section>
 
-    <!-- ======= Services Section ======= -->
-<!--     <section id="services" class="services">
+    <!-- ======= Testimonials ======= -->
+    <section id="testimonials" class="testimonials">
       <div class="container">
-
-        <div class="section-title">
-          <h2>Services</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
-        </div>
-
-        <div class="row">
-          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up">
-            <div class="icon"><i class="bi bi-briefcase"></i></div>
-            <h4 class="title"><a href="">Lorem Ipsum</a></h4>
-            <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
-          </div>
-          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
-            <div class="icon"><i class="bi bi-card-checklist"></i></div>
-            <h4 class="title"><a href="">Dolor Sitema</a></h4>
-            <p class="description">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tarad limino ata</p>
-          </div>
-          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
-            <div class="icon"><i class="bi bi-bar-chart"></i></div>
-            <h4 class="title"><a href="">Sed ut perspiciatis</a></h4>
-            <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
-          </div>
-          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="300">
-            <div class="icon"><i class="bi bi-binoculars"></i></div>
-            <h4 class="title"><a href="">Magni Dolores</a></h4>
-            <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-          </div>
-          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="400">
-            <div class="icon"><i class="bi bi-brightness-high"></i></div>
-            <h4 class="title"><a href="">Nemo Enim</a></h4>
-            <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque</p>
-          </div>
-          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="500">
-            <div class="icon"><i class="bi bi-calendar4-week"></i></div>
-            <h4 class="title"><a href="">Eiusmod Tempor</a></h4>
-            <p class="description">Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi</p>
-          </div>
-        </div>
-
-      </div>
-    </section> -->
-    <!-- End Services Section -->
-
-    <!-- ======= Testimonials Section ======= -->
-    <section id="testimonials" class="testimonials section-bg">
-      <div class="container">
-
-        <div class="section-title">
+        <div class="section-title" data-reveal>
           <h2>Compliments</h2>
           <p>Here you can see compliments and comments from my friends and colleagues 😎</p>
         </div>
 
-        <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
-          <div class="swiper-wrapper">
-
-            <div class="swiper-slide">
-              <div class="testimonial-item" data-aos="fade-up">
-                <p>
-                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Aaare chinta korisna, hoye jaabe .
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-                <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
+        <div class="t-slider" data-reveal>
+          <div class="t-track">
+            <div class="t-slide">
+              <div class="t-card">
+                <p class="quote"><i class="bx bxs-quote-alt-left"></i> Aaare chinta korisna, hoye jaabe. <i class="bx bxs-quote-alt-right"></i></p>
+                <img src="assets/img/testimonials/testimonials-1.jpg" alt="Sifat" loading="lazy">
                 <h3>Sifat</h3>
                 <h4>Best Friend &amp; Business Partner</h4>
               </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-item" data-aos="fade-up" data-aos-delay="100">
-                <p>
-                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Vai, kono kichu lagle janayen.
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-                <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
+            </div>
+            <div class="t-slide">
+              <div class="t-card">
+                <p class="quote"><i class="bx bxs-quote-alt-left"></i> Vai, kono kichu lagle janayen. <i class="bx bxs-quote-alt-right"></i></p>
+                <img src="assets/img/testimonials/testimonials-2.jpg" alt="Sayed" loading="lazy">
                 <h3>Sayed</h3>
                 <h4>Experience Engineer</h4>
               </div>
             </div>
-            <!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-item" data-aos="fade-up" data-aos-delay="200">
-                <p>
-                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Oh Shit !!! Ki banacichos eta ! This is science...
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-                <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
+            <div class="t-slide">
+              <div class="t-card">
+                <p class="quote"><i class="bx bxs-quote-alt-left"></i> Oh Shit !!! Ki banacichos eta ! This is science... <i class="bx bxs-quote-alt-right"></i></p>
+                <img src="assets/img/testimonials/testimonials-3.jpg" alt="Abrar Jawad" loading="lazy">
                 <h3>Abrar Jawad</h3>
                 <h4>Manager, Client Services</h4>
               </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-item" data-aos="fade-up" data-aos-delay="300">
-                <p>
-                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Vai, apni parben try koren...
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-                <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
+            </div>
+            <div class="t-slide">
+              <div class="t-card">
+                <p class="quote"><i class="bx bxs-quote-alt-left"></i> Vai, apni parben try koren... <i class="bx bxs-quote-alt-right"></i></p>
+                <img src="assets/img/testimonials/testimonials-4.jpg" alt="Nafis" loading="lazy">
                 <h3>Nafis</h3>
                 <h4>Game Developer</h4>
               </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-item" data-aos="fade-up" data-aos-delay="400">
-                <p>
-                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Oi kintu onek genius
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-                <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
+            </div>
+            <div class="t-slide">
+              <div class="t-card">
+                <p class="quote"><i class="bx bxs-quote-alt-left"></i> Oi kintu onek genius <i class="bx bxs-quote-alt-right"></i></p>
+                <img src="assets/img/testimonials/testimonials-5.jpg" alt="Samin" loading="lazy">
                 <h3>Samin</h3>
                 <h4>Experience Engineer</h4>
               </div>
-            </div><!-- End testimonial item -->
-
-              <div class="swiper-slide">
-              <div class="testimonial-item" data-aos="fade-up" data-aos-delay="400">
-                <p>
-                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Bro, tomar moddhe maal ase. Pera nai chill.
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-                <img src="assets/img/testimonials/testimonials-6.jpg" class="testimonial-img" alt="">
+            </div>
+            <div class="t-slide">
+              <div class="t-card">
+                <p class="quote"><i class="bx bxs-quote-alt-left"></i> Bro, tomar moddhe maal ase. Pera nai chill. <i class="bx bxs-quote-alt-right"></i></p>
+                <img src="assets/img/testimonials/testimonials-6.jpg" alt="Muhamenul Islam" loading="lazy">
                 <h3>Muhamenul Islam</h3>
                 <h4>Experience Engineer</h4>
               </div>
-            </div><!-- End testimonial item -->
-
+            </div>
           </div>
-          <div class="swiper-pagination"></div>
+          <div class="t-dots" role="group" aria-label="Testimonial pages"></div>
         </div>
-
       </div>
-    </section><!-- End Testimonials Section -->
+    </section>
 
-    <!-- ======= Contact Section ======= -->
-    <section id="contact" class="contact">
+    <!-- ======= Contact ======= -->
+    <section id="contact" class="contact section-bg">
       <div class="container">
-
-        <div class="section-title">
+        <div class="section-title" data-reveal>
           <h2>Contact</h2>
           <p>foodpanda people stay away from me, please.</p>
         </div>
 
-        <div class="row" data-aos="fade-in">
-
-          <div class="col-lg-5 d-flex align-items-stretch">
-            <div class="info">
-              <div class="address">
-                <i class="bi bi-geo-alt"></i>
-                <h4>Location:</h4>
-                <p>Nikunja-2,Dhaka</p>
+        <div class="contact-grid" data-reveal>
+          <div class="contact-info">
+            <div class="info-row">
+              <i class="bx bx-map"></i>
+              <div>
+                <h4>Location</h4>
+                <p>Nikunja-2, Dhaka, Bangladesh</p>
               </div>
-
-              <div class="email">
-                <i class="bi bi-envelope"></i>
-                <h4>Email:</h4>
-                <p>rsarkar.pro@gmail.com</p>
-              </div>
-
-              <div class="phone">
-                <i class="bi bi-phone"></i>
-                <h4>Call:</h4>
-                <p>+8801689802565</p>
-              </div>
-
-              <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621" frameborder="0" style="border:0; width: 100%; height: 290px;" allowfullscreen></iframe> -->
-              <iframe width="400" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" id="gmap_canvas" src="https://maps.google.com/maps?width=400&amp;height=400&amp;hl=en&amp;q=Nikunja-2%20Dhaka+(Rzwan's%20Location)&amp;t=&amp;z=12&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe> <a href='https://www.easybooking.eu/'>Hotelprogramm Easybooking</a> <script type='text/javascript' src='https://embedmaps.com/google-maps-authorization/script.js?id=2d36ce78e6002eb703923398b3d4c687f0f0e751'></script>
             </div>
-
+            <div class="info-row">
+              <i class="bx bx-envelope"></i>
+              <div>
+                <h4>Email</h4>
+                <p><a href="mailto:rsarkar.pro@gmail.com">rsarkar.pro@gmail.com</a></p>
+              </div>
+            </div>
+            <div class="info-row">
+              <i class="bx bx-phone"></i>
+              <div>
+                <h4>Call</h4>
+                <p><a href="tel:+8801689802565">+880 1689 802565</a></p>
+              </div>
+            </div>
+            <iframe class="map" title="Map of Nikunja-2, Dhaka" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+              src="https://maps.google.com/maps?q=Nikunja-2%20Dhaka&t=&z=12&ie=UTF8&iwloc=B&output=embed"></iframe>
           </div>
 
-          <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
-              <div class="row">
-                <div class="form-group col-md-6">
-                  <label for="name">Your Name</label>
-                  <input type="text" name="name" class="form-control" id="name" required>
-                </div>
-                <div class="form-group col-md-6">
-                  <label for="name">Your Email</label>
-                  <input type="email" class="form-control" name="email" id="email" required>
-                </div>
+          <form class="contact-form" id="contact-form" data-reveal>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Your Name</label>
+                <input type="text" name="name" id="name" required autocomplete="name">
               </div>
               <div class="form-group">
-                <label for="name">Subject</label>
-                <input type="text" class="form-control" name="subject" id="subject" required>
+                <label for="email">Your Email</label>
+                <input type="email" name="email" id="email" required autocomplete="email">
               </div>
-              <div class="form-group">
-                <label for="name">Message</label>
-                <textarea class="form-control" name="message" rows="10" required></textarea>
-              </div>
-              <div class="my-3">
-                <div class="loading">Loading</div>
-                <div class="error-message"></div>
-                <div class="sent-message">Your message has been sent. Thank you!</div>
-              </div>
-              <div class="text-center"><button type="submit">Send Message</button></div>
-            </form>
-          </div>
-
+            </div>
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <input type="text" name="subject" id="subject" required>
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea name="message" id="message" rows="8" required></textarea>
+            </div>
+            <div>
+              <button type="submit" class="submit">Send Message</button>
+            </div>
+            <p class="form-hint">This opens your email app with the message pre-filled — no server, no spam, no data collection. 📬</p>
+          </form>
         </div>
-
       </div>
-    </section><!-- End Contact Section -->
+    </section>
 
-  </main><!-- End #main -->
+    <!-- Mobile footer (desktop footer lives in the sidebar) -->
+    <footer id="footer">
+      &copy; <strong>Rezowan</strong> · Dhaka, Bangladesh
+    </footer>
+  </main>
 
-  <!-- ======= Footer ======= -->
-  <footer id="footer">
-    <div class="container">
-      <div class="copyright">
-        &copy; Copyright <strong><span>Rezowan</span></strong>
-      </div>
-      <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/ -->
-        Website Under Construction !
-      </div>
-    </div>
-  </footer><!-- End  Footer -->
+  <a href="#hero" class="back-to-top" aria-label="Back to top"><i class="bx bx-up-arrow-alt"></i></a>
 
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" hidden aria-modal="true" role="dialog" aria-label="Media viewer">
+    <button class="lb-btn lb-close" type="button" aria-label="Close"><i class="bx bx-x"></i></button>
+    <button class="lb-btn lb-prev" type="button" aria-label="Previous"><i class="bx bx-chevron-left"></i></button>
+    <button class="lb-btn lb-next" type="button" aria-label="Next"><i class="bx bx-chevron-right"></i></button>
+    <div class="lb-stage"></div>
+  </div>
 
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/typed.js/typed.umd.js"></script>
-  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-
-  <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
-
 </body>
-
 </html>

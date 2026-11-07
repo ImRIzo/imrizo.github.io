@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Embodied AI Drone - Rezowan Sarkar</title>
+  <meta name="description" content="Embodied AI Drone - a Unity 3D drone simulation powered by a locally running Qwen2.5 7B LLM that patrols, detects fire, and acts autonomously.">
+  <link rel="icon" href="../assets/img/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Raleway:wght@500;600;700&display=swap" rel="stylesheet">
+  <link href="../assets/css/style.css" rel="stylesheet">
+</head>
+<body>
+
+  <button class="mobile-nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false"><i class="bx bx-menu"></i></button>
+  <div class="nav-backdrop"></div>
+
+  <header id="header">
+    <div class="profile">
+      <img src="../assets/img/profile-img.jpg" alt="Rezowan Sarkar">
+      <h1><a href="../index.html">Rezowan Sarkar</a></h1>
+      <p class="tagline">AI and XR</p>
+      <div class="social-links">
+        <a href="https://github.com/ImRizo" target="_blank" rel="noopener" aria-label="GitHub"><i class="bx bxl-github"></i></a>
+        <a href="https://www.linkedin.com/in/imriz1" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="bx bxl-linkedin"></i></a>
+      </div>
+      <a class="btn-cv" href="../assets/CV_Rezowan_826.pdf" download aria-label="Download CV as PDF"><i class="bx bx-download"></i> Download CV</a>
+    </div>
+
+    <nav id="navbar" aria-label="Main navigation">
+      <ul>
+        <li><a href="../index.html#hero" class="nav-link active"><i class="bx bx-home"></i> <span>Home</span></a></li>
+        <li><a href="../index.html#about" class="nav-link"><i class="bx bx-user"></i> <span>About</span></a></li>
+        <li><a href="../index.html#skills" class="nav-link"><i class="bx bx-book-content"></i> <span>Skills</span></a></li>
+        <li><a href="../index.html#resume" class="nav-link"><i class="bx bx-file-blank"></i> <span>Resume</span></a></li>
+        <li><a href="../index.html#portfolio" class="nav-link"><i class="bx bx-play"></i> <span>Portfolio</span></a></li>
+        <li><a href="../index.html#contact" class="nav-link"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
+      </ul>
+    </nav>
+
+    <div class="sidebar-foot">&copy; <strong>Rezowan</strong> · Putrajaya, Malaysia</div>
+  </header>
+
+  <main id="main">
+
+    <section class="breadcrumbs">
+      <div class="container">
+        <h2>Embodied AI Drone</h2>
+        <ol>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../index.html#portfolio">Portfolio</a></li>
+          <li>Embodied AI Drone</li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="project-detail">
+      <div class="container">
+        <div class="detail-grid">
+          <div class="detail-media">
+            <a class="poster-link" href="https://youtu.be/E0jWN-sea_g" target="_blank" rel="noopener" aria-label="Watch Embodied AI Drone on YouTube">
+              <img src="../assets/img/portfolio/embodied_ai_drone_poster.jpg" alt="Embodied AI Drone - Unity simulation with fire detection scenario">
+              <span class="poster-play"><i class="bx bx-play"></i></span>
+            </a>
+          </div>
+
+          <div>
+            <div class="detail-info">
+              <h3>Project information</h3>
+              <ul>
+                <li><strong>Category</strong> AI · Computer Vision</li>
+                <li><strong>Stack</strong> Unity 3D + Qwen2.5 7B (local LLM)</li>
+                <li><strong>Platform</strong> Local - MacBook Pro M2</li>
+                <li><strong>Video</strong> <a href="https://youtu.be/E0jWN-sea_g" target="_blank" rel="noopener">YouTube link</a></li>
+              </ul>
+            </div>
+
+            <div class="detail-desc">
+              <h2>About the project</h2>
+              <p>An Embodied AI drone simulation built in Unity 3D, with Qwen2.5 7B running locally as the drone's brain. Tasks can be assigned through a command prompt, and the drone acts accordingly.</p>
+              <p>So far, I've implemented one hazard scenario: fire detection and response. When the fire button is clicked, a fire spawns at a random location in the environment. The drone is then given a command: <em>"Do patrol. If you find anything unusual, take action."</em></p>
+              <p>The drone observes its surroundings and reasons about what to do next. The LLM is provided with information about the drone's available capabilities and tools:</p>
+              <ul>
+                <li>Moving in different directions.</li>
+                <li>Splashing water.</li>
+                <li>Sounding an alarm.</li>
+              </ul>
+              <p>Based on the situation, the LLM generates an action sequence and sends it back to the Unity simulation for execution. Everything runs locally on a MacBook Pro M2, so the reasoning and execution take some time due to limited computing resources - that's why the video is fast-forwarded.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer id="footer">&copy; <strong>Rezowan</strong> · Putrajaya, Malaysia</footer>
+  </main>
+
+  <a href="#" class="back-to-top" aria-label="Back to top"><i class="bx bx-up-arrow-alt"></i></a>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

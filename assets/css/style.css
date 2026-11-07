@@ -789,6 +789,30 @@ section { padding: 64px 0; }
   border-radius: var(--radius);
   box-shadow: var(--shadow);
 }
+.detail-media .poster-link {
+  position: relative;
+  display: block;
+}
+.detail-media .poster-play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 84px;
+  height: 84px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.55);
+  color: #fff;
+  font-size: 2.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+.detail-media .poster-link:hover .poster-play {
+  background: rgba(0, 0, 0, 0.78);
+  transform: translate(-50%, -50%) scale(1.08);
+}
 .detail-media > * + * { margin-top: 14px; }
 .detail-info {
   background: var(--white);
